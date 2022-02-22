@@ -1,20 +1,13 @@
-﻿{ 
+﻿double tax_rate, tip, total;
 
-    float percentageMales;
-    float percentageFemales;
-    float maleFemale;
+System.Console.WriteLine("This program will calculate the tax and tip of your meal");
+System.Console.WriteLine("How much was your meal?");
+Double mealCost = Convert.ToInt32(Console.ReadLine());
 
-    Console.WriteLine("Hello, how many female cats are there?");
-    int femaleCats = Convert.ToInt32(Console.ReadLine());
+tax_rate = 0.0675 * mealCost;
+tip = 0.2 * (mealCost + tax_rate);
+total = mealCost + tax_rate + tip;
 
-    Console.WriteLine("How many male cats are there?");
-    int maleCats = Convert.ToInt32(Console.ReadLine());
-
-// Equation to get prcentage
-    maleFemale = (maleCats + femaleCats);
-    percentageMales = (maleCats / maleFemale);
-    percentageFemales = (femaleCats / maleFemale);
-
-    System.Console.WriteLine("The precentage of male cats in the shelter is " + percentageMales);
-    System.Console.WriteLine("The percentage of female cats in the shelter is " + percentageFemales);
-}
+System.Console.WriteLine("The tax amount is " + tax_rate);
+System.Console.WriteLine("20% tip is " + tip);
+System.Console.WriteLine("The total for your meal is " + total);
